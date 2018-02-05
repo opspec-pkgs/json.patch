@@ -1,0 +1,25 @@
+name: github.com/opspec-pkgs/json.patch
+description: patches json according to according to [rfc6902](https://tools.ietf.org/html/rfc6902)
+inputs:
+  target:
+    object:
+      description: target of patch operations
+      default: {"greeting": "placeholder"}
+  operations:
+    array:
+      description: operations to apply to target
+      default: [{ "op": "replace", "path": "/greeting", "value": "hello world" }]
+outputs:
+  result:
+    string:
+      description: patched json
+version: 1.0.0
+run:
+  container:
+    image: { ref: 'opspecpkgs/json.patch:1.0.0' }
+    cmd: [node, /cmd.js]
+    files:
+      /cmd.js:
+      /result: $(result)
+      /target.json: $(target)
+      /operations.json: $(operations)
