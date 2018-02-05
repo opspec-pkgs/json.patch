@@ -1,5 +1,5 @@
 name: github.com/opspec-pkgs/json.patch
-description: patches json according to according to [rfc6902](https://tools.ietf.org/html/rfc6902)
+description: patches json according to [rfc6902](https://tools.ietf.org/html/rfc6902)
 inputs:
   target:
     object:

@@ -2,7 +2,7 @@
 
 # Problem statement
 
-patches json according to according to [rfc6902](https://tools.ietf.org/html/rfc6902)
+patches json according to [rfc6902](https://tools.ietf.org/html/rfc6902)
 
 # Format
 
